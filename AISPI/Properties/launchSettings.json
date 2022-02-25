@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AISPI": {
+      "commandName": "Project",
+      "commandLineArgs": "COM3"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+﻿<Window x:Class="Launcher.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Launcher"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Настройки"  Height="570" Width="350" Icon="ICON@512.png" ResizeMode="NoResize" ShowInTaskbar="True">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#59007BFF" Offset="1"/>
+                <GradientStop Color="White" Offset="0.5"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Rectangle Width="300" Height="500" VerticalAlignment="Bottom" Margin="0,21" RadiusY="10" RadiusX="10" Fill="White">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Grid Margin="21">
+            <StackPanel
+            Orientation="Vertical">
+                <TextBox x:Name="ServerBox" materialDesign:HintAssist.Hint="Адрес сервера" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                         FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="5,10"/>
+                <TextBox x:Name="LocalPortBox" materialDesign:HintAssist.Hint="Локальный порт" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                         FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="5,10"/>
+                <TextBox x:Name="RemotePortBox" materialDesign:HintAssist.Hint="Удаленный порт" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                         FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="5,10"/>
+                <TextBox x:Name="Exes" materialDesign:HintAssist.Hint="Для запуска" Style="{StaticResource MaterialDesignFloatingHintTextBox}" 
+                         FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="5,10"/>
+                <TextBlock x:Name="exefile"
+                         FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="5,5"/>
+                <Button Width="200" Margin="5,5" Content="Файл Putty" Click="Button_Click_2"/>
+                <TextBlock x:Name="file"
+                         FontFamily="Champagne &amp; Limousines" FontSize="18" Margin="5,5"/>
+                <Button Width="200" Margin="5,5" Content="Файл идентификации" Click="Button_Click"/>
+                <Button Width="200" Margin="5,25" Content="Сохранить" Click="Button_Click_1"/>
+            </StackPanel>
+        </Grid>
+        
+    </Grid>
+</Window>
